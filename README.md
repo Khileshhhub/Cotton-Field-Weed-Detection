@@ -1,6 +1,6 @@
 Cotton Weed Detection using YOLO11m
 
-This project detects weeds and crops in cotton fields using a YOLO11m object detection model. It supports training a custom model on your dataset and running detections on new images or videos.
+This project detects weeds and crops in cotton fields using a YOLO11m object detection model. It supports training a custom model on your dataset and running detections on images .
 
 1. Project Structure
 
