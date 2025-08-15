@@ -2,25 +2,9 @@ Cotton Weed Detection using YOLO11m
 
 This project detects weeds and crops in cotton fields using a YOLO11m object detection model. It supports training a custom model on your dataset and running detections on images .
 
-1. Project Structure
 
-cotton-weed-detection/
-│
-├── data/
-│   └── dataset/
-│       ├── images/           # training/validation/test images
-│       ├── labels/           # YOLO-format annotation text files
-│       └── data.yaml         # dataset configuration
-│
-├── models/
-│   └── yolo11m/
-│       └── best.pt           # trained YOLO11m weights
-│
-├── outputs/                  # detection outputs
-│
-└── README.md
 
-2. Installation
+1. Installation
 
 Make sure Python 3.8+ is installed.
 
@@ -30,7 +14,7 @@ If using Google Colab:
 
 !pip install ultralytics
 
-3. Dataset Setup
+2. Dataset Setup
 
 Your data.yaml should look like this:
 
@@ -41,7 +25,7 @@ test: /cotton-weed-detection/data/dataset/test/images
 nc: 2
 names: ['crop', 'weed']  # Add labels according to the dataset
 
-4. Training the Model
+3. Training the Model
 
 Command-line:
 
@@ -68,56 +52,7 @@ Output weights:
 
 runs/detect/train/weights/best.pt
 
-5. Evaluating Model Performance
 
-yolo val model=/path/to/best.pt data=/path/to/data.yaml split=test
-
-Python:
-
-metrics = model.val(data="/path/to/data.yaml", split="test")
-print(metrics)
-
-📊 Example Metrics Table:
-
-Class
-
-Precision
-
-Recall
-
-mAP@0.5
-
-mAP@0.5:0.95
-
-Crop
-
-0.92
-
-0.90
-
-0.93
-
-0.78
-
-Weed
-
-0.89
-
-0.91
-
-0.92
-
-0.75
-
-Overall
-
-0.91
-
-0.905
-
-0.925
-
-0.765
 
 6. Running Detection
 
