@@ -1,0 +1,5 @@
+train: /content/drive/MyDrive/cotton-weed-detection/data/dataset/train/images
+val: /content/drive/MyDrive/cotton-weed-detection/data/dataset/valid/images
+
+nc: 6
+names: ['crabgrass', 'goosegrass', 'palmer_amaranth', 'pricklysida', 'purslane', 'weed']
